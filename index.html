@@ -21,19 +21,15 @@
         </div>
         <form id="contact_form" method="post" action="guardar_datos.php">
             <div class="name">
-                <label for="name"></label>
                 <input type="text" placeholder="nombre" name="name" id="name_input" >
             </div>
             <div class="email">
-                <label for="email"></label>
                 <input type="email" placeholder="email" name="email" id="email_input" >
             </div>
             <div class="telephone">
-                <label for="telephone"></label>
                 <input type="text" placeholder="teléfono" name="telephone" id="telephone_input" >
             </div>            
             <div class="message">
-                <label for="message"></label>
                 <textarea name="message" placeholder="mensaje" id="message_input" cols="30" rows="5"
                     ></textarea>
             </div>
@@ -49,7 +45,7 @@
             if (location.search.indexOf('success=true') > -1) {
                 alert('Los datos se han almacenado correctamente.');
             }
-            document.getElementById('form').reset();
+            document.getElementById('contact_form').reset();
         }
     </script>
 </body>

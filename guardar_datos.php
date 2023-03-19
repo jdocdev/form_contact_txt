@@ -7,11 +7,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Validamos que los campos no estén vacíos
     if(empty($nombre) || empty($correo) || empty($telefono) || empty($mensaje)) {
-        // echo '
-        // <h3>Por favor, complete todos los campos</>
-        // <br>
-        // <button onclick="history.back()">Volver atrás</button>
-        // ';
         echo '
         <!DOCTYPE html>
         <html lang="en">
@@ -23,56 +18,117 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <link rel="stylesheet" href="styles.css">
         </head>
         <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
-        
-            <div style="padding: 1rem; margin: 1rem" id="container" class="container_msn">
-                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;" class=".message">Por favor, complete todos los campos</h1>
-                <button id="form_button" onclick="history.back()">comprobar</button>
+    
+            <div class="container container_msn" style="padding: 1rem; margin: 1rem; ">
+                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;">Por favor, complete todos los campos</h1>
+                <button id="form_button" onclick="history.back()">volver atras</button>
             </div>
-            
+        
         </body>
-        </html>';
-        exit();        
+        </html>
+        ';
+        exit();
     }
 
 	// Validar que el campo de nombre solo contenga letras y espacios
-    if(!preg_match("/^[a-zA-Z ]*$/", $nombre)) {
+    if(!preg_match("/^[a-zA-Z ]*$/", $nombre)){
         echo '
-        <h3>El campo de nombre solo debe contener letras y espacios.</>
-        <br>
-        <button onclick="history.back()">Volver atrás</button>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Error</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
+    
+            <div class="container container_msn" style="padding: 1rem; margin: 1rem; ">
+                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;">El campo de nombre solo debe contener letras y espacios.</h1>
+                <button id="form_button" onclick="history.back()">volver atras</button>
+            </div>
+        
+        </body>
+        </html>
         ';
         exit();
     } 
 
     // Validamos que el correo tenga un formato válido
-    if(!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+    if(!filter_var($correo, FILTER_VALIDATE_EMAIL)){
         echo '
-        <h3>Por favor, ingrese un correo electrónico válido.</>
-        <br>
-        <button onclick="history.back()">Volver atrás</button>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Error</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
+    
+            <div class="container container_msn" style="padding: 1rem; margin: 1rem; ">
+                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;">Por favor, ingrese un correo electrónico válido.</h1>
+                <button id="form_button" onclick="history.back()">volver atras</button>
+            </div>
+        
+        </body>
+        </html>
         ';
         exit();
     }
 
     // Validar que el campo de teléfono solo contenga números
-    if(!preg_match("/^[0-9]*$/", $telefono)) {
+    if(!preg_match("/^[0-9]*$/", $telefono)){
         echo '
-        <h3>El campo de teléfono solo debe contener números.</>
-        <br>
-        <button onclick="history.back()">Volver atrás</button>
-        ';        
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Error</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
+    
+            <div class="container container_msn" style="padding: 1rem; margin: 1rem; ">
+                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;">El campo de teléfono solo debe contener números.</h1>
+                <button id="form_button" onclick="history.back()">volver atras</button>
+            </div>
+        
+        </body>
+        </html>
+        ';
         exit();
     }
 
 	// Validar que el campo de mensaje solo contenga letras y espacios
-    if(!preg_match("/^[a-zA-Z0-9_\-\.\s@]+$/", $mensaje)) {
+    if(!preg_match("/^[a-zA-Z0-9_\-\.\s@]*$/", $mensaje)){
         echo '
-        <h3>El campo de mensaje solo debe contener letras, números, espacios, y caracteres especiales propios de un email.</>
-        <br>
-        <button onclick="history.back()">Volver atrás</button>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Error</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
+    
+            <div class="container container_msn" style="padding: 1rem; margin: 1rem; ">
+                <h1 style="font-size: 1rem; letter-spacing: 0.2rem; margin-bottom: 2rem;">El campo de mensaje solo debe contener letras, números, espacios, y caracteres especiales propios de un email.</h1>
+                <button id="form_button" onclick="history.back()">volver atras</button>
+            </div>
+        
+        </body>
+        </html>
         ';
         exit();
-    }     
+    }    
         
     // Sanitizamos los datos antes de almacenarlos en el archivo de texto
     $nombre = htmlspecialchars($nombre);
