@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+:root{
+    --light:#E9E8E8;
+    --dark:#20262E;
+}
+
+html {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+    background: var(--light);
+}
+
+button {
+    text-transform: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+    margin: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+#container {
+    border: solid 0.2rem var(--dark);
+    max-width: 48rem;
+    margin: 3.8rem auto;
+    position: relative;
+}
+
+form {
+    padding: 2.2rem;
+    margin: 3.2rem 0;
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    border-bottom: solid 0.2rem var(--dark);
+    margin: -0.6rem auto;
+    width: 5rem;
+}
+
+.icon_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: var(--dark);
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+input[type='text'],
+[type='email'],
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 0.2rem var(--dark);
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+    margin: 0 0 1.9rem 0;
+    padding: 0 0 0.9rem 0;
+    text-transform: uppercase;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.9rem 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+.telephone {
+    width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 9.4rem;
+    resize: none;
+    width: 100%;
+}
+
+#form_button {
+    background: none;
+    border: solid 0.2rem var(--dark);
+    color: var(--dark);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    padding: 1.3rem 2.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+#form_button:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+
+@media screen and (max-width: 768px) {
+    #container {
+        margin: 1.3rem auto;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    css .underline {
+        width: 4.3rem;
+    }
+
+    #form_button {
+        padding: 1rem 1.6rem;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .underline {
+        width: 3.4rem;
+    }
+
+    input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+}

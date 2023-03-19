@@ -1,0 +1,10 @@
+Nombre: juan
+Correo: pruebas@pruebas.com
+Teléfono: 123456789
+Mensaje: prueba juan@prueba.com
+
+Nombre: juan david
+Correo: prueba@prueba.com
+Teléfono: 55646564
+Mensaje: pruebas
+
